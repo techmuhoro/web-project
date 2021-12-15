@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #498deb;
+  --secondary-color: #00e5c0;
+}
+
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif !important;
+}
+.root {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./imgs/landing2.jpg');
+  background-position: center;
+  background-size: 100%;
+  position: relative;
+}
+.root .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+}
+.root .content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.root .header {
+  /* background: rgba(12, 189, 100, 0.9); */
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+.root .header .logo {
+  width: 20%;
+  display: flex;
+  align-items: flex-start;
+  /* border: 1px solid black; */
+  padding: 20px 0;
+}
+.root .header .logo > div {
+  margin-right: 10px;
+}
+.root .header .logo > p {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 700;
+}
+.root .header .menu {
+  width: 60%;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.root .header .menu ul {
+  list-style: none;
+  display: flex;
+  padding-top: 0;
+}
+.root .header .menu ul li:first-of-type {
+  margin-right: 60px;
+}
+.root .header .menu ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.root .header .header-right {
+  width: 20%;
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
+}
+.root .header .header-right img {
+  display: none;
+}
+.root .header .header-right a {
+  color: blue;
+  text-decoration: none;
+  background: white;
+  display: inline-block;
+  padding: 10px 50px;
+  border-radius: 10px;
+  margin-left: auto;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/*======================Styles for main==========================*/
+
+.root .main {
+  color: white;
+}
+.root .main .welcome {
+  text-align: center;
+  margin-top: 200px;
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.root .main .account button {
+  padding: 20px 0;
+  min-width: 400px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  letter-spacing: 1px;
+}
+.root .main .account .create-account {
+  background: linear-gradient(90deg, #498deb 0%, #00e5c0 100%);
+  margin-bottom: 20px;
+}
+.root .main .account .login {
+  color: white;
+  background: none;
+  border: 2px solid white;
+  display: none;
+}
+
+/*==============X=======Styles for main===========X==============*/
+
+/*======================Styles for modal=========================*/
+
+.root .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+}
+.root .modal.show {
+  display: block;
+}
+.root .modal.hide {
+  display: none;
+}
+.root .modal > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root .modal .modal-content {
+  background: white;
+  border-radius: 5px;
+  padding: 0 40px;
+  position: relative;
+  padding-top: 70px;
+}
+
+.root .modal .close-modal {
+  width: 35px;
+  height: 35px;
+  border: 2px solid gray;
+  border-radius: 99999px;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  cursor: pointer;
+}
+.root .modal .close-modal img {
+  width: 50%;
+}
+.root .modal .modal-head {
+  margin-bottom: 20px;
+}
+.root .modal .modal-head > div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.root .modal .modal-head > p {
+  text-align: center;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+.root .modal-body .login-container {
+  width: 330px;
+  margin-bottom: 20px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 0;
+}
+.root .modal-body .login-container div {
+  margin-right: 20px;
+}
+.root .modal-body .login-container p {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-top: -5px;
+}
+.root .modal-body .terms {
+  text-align: center;
+  font-size: 0.68rem;
+  margin-bottom: 40px;
+  color: gray;
+}
+.root .modal-body .terms a {
+  color: inherit;
+}
+.root .modal-body .terms span {
+  display: block;
+}
+/* .root .modal .modal-container {
+
+} */
+
+/*==============X=======Styles for modal===========X=============*/
+
+/*======================Responsive styling=======================*/
+
+@media screen and (max-width: 640px) {
+  .root {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .root .header {
+    width: 90%;
+  }
+  .root .header .logo {
+    width: 50%;
+  }
+  .root .header .menu {
+    display: none;
+  }
+  .root .header .header-right {
+    width: 50%;
+  }
+  .root .header .header-right img {
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  .root .header .header-right a {
+    display: none;
+  }
+  .root .main .account .login {
+    display: block;
+  }
+  .root .modal .modal-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .root .modal .modal-head {
+    margin-top: 100px;
+  }
+  .root .modal .modal-head > div {
+    margin-bottom: 70px;
+  }
+  .root .modal-body .login-container {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .root .main .account .create-account {
+    background: white;
+    color: black;
+  }
+}
+
+/*======================Responsive styling=======================*/
